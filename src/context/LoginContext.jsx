@@ -17,13 +17,18 @@ const LoginContext = ({children}) => {
     const [isLogged, setIsLogged] = useState(false) 
 
     function checkUser(userName, password){
-       if(userName === "varun" && password === "varun@123"){
+       if(userName ==='varun' && password === 'varun@123'){
             setIsLogged(true)
+            alert("login successfull")
+       }
+       else{
+        alert("user does not exist")
        }
     }
 
     const value = {
-        isLogged
+        isLogged,
+        checkUser
     }
 
     return (
